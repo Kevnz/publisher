@@ -2,7 +2,7 @@
   "name": "@kev_nz/publisher",
   "version": "1.0.0",
   "description": "Publish readme.md to gh-pages",
-  "main": "lib/index.js",
+  "main": "src/index.js",
   "private": false,
   "engines": {
     "node": ">= 10"
@@ -17,6 +17,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com/Kevnz/publisher.git"
   },
+  "homepage": "http://kevinisom.info/publisher",
   "keywords": [
     "markdown",
     "publish",
@@ -28,7 +29,6 @@
   "bugs": {
     "url": "https://github.com/Kevnz/publisher/issues"
   },
-  "homepage": "https://github.com/Kevnz/publisher#readme",
   "dependencies": {
     "@kev_nz/eslint-config": "^3.1.0",
     "eslint": "^5.14.1",

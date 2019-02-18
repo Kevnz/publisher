@@ -7,7 +7,6 @@ const fse = require('fs-extra')
 const packageInfo = require(path.resolve(process.cwd(), 'package.json'))
 
 module.exports = async () => {
-  console.info('process', path.resolve(process.cwd(), 'readme.md'))
   const readme = await fs.readFile(
     path.resolve(process.cwd(), 'readme.md'),
     'utf8'
@@ -21,7 +20,6 @@ module.exports = async () => {
     'utf8'
   )
 
-  console.info('readme', readme)
   converter.setFlavor('github')
   const html = `${format(header, {
     name: packageInfo.name,

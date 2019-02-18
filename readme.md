@@ -1,6 +1,6 @@
 # Publisher
 
-Publish your readme to gh-pages
+Publish your readme to gh-pages.
 
 ## Usage
 
@@ -13,3 +13,4 @@ Then run
 ```
 npx publisher
 ```
+

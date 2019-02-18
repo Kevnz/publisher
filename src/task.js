@@ -8,6 +8,7 @@ const logStep = message =>
     console.info(message)
     return resolve(true)
   })
+
 const generate = async () => {
   return processor()
     .then(() => logStep('HTML generated'))
@@ -20,8 +21,17 @@ const generate = async () => {
     .then(() => logStep('CSS copied'))
 }
 
-module.exports = {
-  generate,
-  processor,
-  publish,
+module.exports = () => {
+  generate()
+    .then(() => {
+      return publish()
+    })
+    .then(() => logStep('published to github'))
+    .then(() => {
+      return process.exit(0)
+    })
+    .catch(error => {
+      console.error('failed', error)
+      process.exit(1)
+    })
 }

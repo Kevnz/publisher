@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-const pub = require('../src/index')
+const pub = require('../src/task')
 
 pub()
