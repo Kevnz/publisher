@@ -6,5 +6,10 @@ Publish your readme to gh-pages
 
 ```
 npm install @kev_nz/publisher --save-dev
+```
+
+Then run
+
+```
 npx publisher
 ```

@@ -1,8 +1,11 @@
 const fs = require('fs').promises
 const path = require('path')
+const format = require('string-template')
 const showdown = require('showdown')
 const converter = new showdown.Converter()
 const fse = require('fs-extra')
+const packageInfo = require(path.resolve(process.cwd(), 'package.json'))
+
 module.exports = async () => {
   console.info('process', path.resolve(process.cwd(), 'readme.md'))
   const readme = await fs.readFile(
@@ -20,7 +23,10 @@ module.exports = async () => {
 
   console.info('readme', readme)
   converter.setFlavor('github')
-  const html = `${header}
+  const html = `${format(header, {
+    name: packageInfo.name,
+    description: packageInfo.description,
+  })}
   ${converter.makeHtml(readme)}
   ${footer}`
   await fse.ensureDir(path.resolve(process.cwd(), 'dist'))
