@@ -1,5 +1,7 @@
 # Publisher
 
+[![npm version](https://badge.fury.io/js/%40kev_nz%2Fpublisher.svg)](https://badge.fury.io/js/%40kev_nz%2Fpublisher)
+
 Publish your readme to gh-pages.
 
 ## Usage
