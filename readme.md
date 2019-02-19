@@ -14,3 +14,5 @@ Then run
 npx publisher
 ```
 
+## Custom config ?
+

@@ -1,6 +1,6 @@
 {
   "name": "@kev_nz/publisher",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Publish readme.md to gh-pages",
   "main": "src/index.js",
   "private": false,
@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "publisher": "./bin/publisher.js"
+    "publisher": "./bin/publish.js"
   },
   "repository": {
     "type": "git",
