@@ -1,6 +1,6 @@
 {
   "name": "@kev_nz/publisher",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Publish readme.md to gh-pages",
   "main": "src/index.js",
   "private": false,
@@ -29,9 +29,11 @@
   "bugs": {
     "url": "https://github.com/Kevnz/publisher/issues"
   },
-  "dependencies": {
+  "devDependencies": {
     "@kev_nz/eslint-config": "^3.1.0",
-    "eslint": "^5.14.1",
+    "eslint": "^5.14.1"
+  },
+  "dependencies": {
     "fs-extra": "^7.0.1",
     "gh-pages": "^2.0.1",
     "showdown": "^1.9.0",
