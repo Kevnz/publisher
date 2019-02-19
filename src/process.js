@@ -11,12 +11,23 @@ module.exports = async () => {
     path.resolve(process.cwd(), 'readme.md'),
     'utf8'
   )
+  const customHeader = await fse.pathExists(
+    path.resolve(process.cwd(), '.assets', 'head.html')
+  )
+
   const header = await fs.readFile(
-    path.resolve(__dirname, 'assets', 'head.html'),
+    customHeader
+      ? path.resolve(process.cwd(), '.assets', 'head.html')
+      : path.resolve(__dirname, 'assets', 'head.html'),
     'utf8'
   )
+  const customFooter = await fse.pathExists(
+    path.resolve(process.cwd(), '.assets', 'foot.html')
+  )
   const footer = await fs.readFile(
-    path.resolve(__dirname, 'assets', 'foot.html'),
+    customFooter
+      ? path.resolve(process.cwd(), '.assets', 'foot.html')
+      : path.resolve(__dirname, 'assets', 'foot.html'),
     'utf8'
   )
 
