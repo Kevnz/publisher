@@ -1,6 +1,6 @@
 {
   "name": "@kev_nz/publisher",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "description": "Publish readme.md to gh-pages",
   "main": "src/index.js",
   "private": false,
@@ -8,7 +8,8 @@
     "node": ">= 10"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "node ./bin/publish.js"
   },
   "bin": {
     "publisher": "./bin/publish.js"
