@@ -1,9 +1,14 @@
 const fs = require('fs').promises
 const path = require('path')
+const fse = require('fs-extra')
 const format = require('string-template')
 const showdown = require('showdown')
-const converter = new showdown.Converter()
-const fse = require('fs-extra')
+const showdownHighlight = require('showdown-highlight')
+
+const converter = new showdown.Converter({
+  extensions: [showdownHighlight],
+})
+
 const packageInfo = require(path.resolve(process.cwd(), 'package.json'))
 
 module.exports = async () => {

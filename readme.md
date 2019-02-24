@@ -20,5 +20,6 @@ npx publisher
 
 To use custom  html create a folder called `.assets` in the root of your project and
 add a `head.html` file with all the content before the readme contents, and a `foot.html`
-in the `.assets` folder for all content after the readme contents.
+in the `.assets` folder for all content after the readme contents. The code highlighting uses
+[Highlightjs](https://highlightjs.org/) for styles.
 

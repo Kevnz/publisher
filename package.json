@@ -1,6 +1,6 @@
 {
   "name": "@kev_nz/publisher",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Publish readme.md to gh-pages",
   "main": "src/index.js",
   "private": false,
@@ -38,6 +38,7 @@
     "fs-extra": "^7.0.1",
     "gh-pages": "^2.0.1",
     "showdown": "^1.9.0",
+    "showdown-highlight": "^2.1.3",
     "string-template": "^1.0.0"
   }
 }
