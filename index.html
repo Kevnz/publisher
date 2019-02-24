@@ -22,26 +22,8 @@
 <h2 id="custom-config">Custom config</h2>
 <p>To use custom  html create a folder called <code>.assets</code> in the root of your project and<br />
 add a <code>head.html</code> file with all the content before the readme contents, and a <code>foot.html</code><br />
-in the <code>.assets</code> folder for all content after the readme contents.</p>
-<h3 id="in-code">In code</h3>
-<pre><code class="hljs js language-js"><span class="hljs-keyword">const</span> {
-  generate,
-  processor,
-  publish,
-} = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@kev_nz/publisher'</span>)
-
-generate()
-  .then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-    <span class="hljs-keyword">return</span> publish()
-  })
-  .then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> logStep(<span class="hljs-string">'published to github'</span>))
-  .then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-    <span class="hljs-keyword">return</span> process.exit(<span class="hljs-number">0</span>)
-  })
-  .catch(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> {
-    <span class="hljs-built_in">console</span>.error(<span class="hljs-string">'failed'</span>, error)
-    process.exit(<span class="hljs-number">1</span>)
-  })</code></pre>
+in the <code>.assets</code> folder for all content after the readme contents. The code highlighting uses<br />
+<a href="https://highlightjs.org/">Highlightjs</a> for styles.</p>
   </div>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64038939-2"></script>
 <script>
