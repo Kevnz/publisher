@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "cross-env NODE_ENV=test mocha",
-    "prepublish": "node ./bin/publish.js"
+    "prepare": "node ./bin/publish.js"
   },
   "bin": {
     "publisher": "./bin/publish.js"
