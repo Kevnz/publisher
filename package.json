@@ -8,8 +8,7 @@
     "node": ">= 10"
   },
   "scripts": {
-    "test": "cross-env NODE_ENV=test mocha",
-    "prepare": "node ./bin/publish.js"
+    "test": "cross-env NODE_ENV=test mocha"
   },
   "bin": {
     "publisher": "./bin/publish.js"
