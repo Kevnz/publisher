@@ -2,16 +2,16 @@ const path = require('path')
 const fs = require('fs-extra')
 
 module.exports = () => {
-  const assetDir = fs.readdirSync(path.resolve(__dirname, '../', '.assets'))
+  const assetDir = fs.readdirSync(path.resolve(process.cwd(), '.assets'))
 
   const assetsToCopy = assetDir
     .filter(f => f.indexOf('.html') === -1)
     .map(f => ({
-      from: path.resolve(__dirname, '../', '.assets/', f),
-      to: path.resolve(__dirname, '../', 'dist/', f),
+      from: path.resolve(process.cwd(), '.assets/', f),
+      to: path.resolve(process.cwd(), 'dist/', f),
     }))
 
-  const distDir = path.resolve(__dirname, '../', 'dist/')
+  const distDir = path.resolve(process.cwd(), 'dist/')
 
   if (!fs.existsSync(distDir)) {
     fs.mkdirSync(distDir)
