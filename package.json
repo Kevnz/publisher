@@ -1,6 +1,6 @@
 {
   "name": "@kev_nz/publisher",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "Publish readme.md to gh-pages",
   "main": "src/index.js",
   "private": false,
@@ -8,7 +8,7 @@
     "node": ">= 10"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "publish": "node ./bin/publish.js"
   },
   "bin": {
@@ -32,7 +32,12 @@
   },
   "devDependencies": {
     "@kev_nz/eslint-config": "^3.1.0",
-    "eslint": "^5.14.1"
+    "chai": "^4.2.0",
+    "eslint": "^5.14.1",
+    "fuxor": "^2.2.5",
+    "mocha": "^6.0.2",
+    "mocha-simple-snapshots": "^1.0.1",
+    "mock-fs": "^4.8.0"
   },
   "dependencies": {
     "fs-extra": "^7.0.1",
