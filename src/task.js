@@ -22,16 +22,9 @@ const generate = async () => {
 }
 
 module.exports = () => {
-  generate()
+  return generate()
     .then(() => {
       return publish()
     })
     .then(() => logStep('published to github'))
-    .then(() => {
-      return process.exit(0)
-    })
-    .catch(error => {
-      console.error('failed', error)
-      process.exit(1)
-    })
 }
