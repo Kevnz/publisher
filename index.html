@@ -24,6 +24,20 @@
 add a <code>head.html</code> file with all the content before the readme contents, and a <code>foot.html</code><br />
 in the <code>.assets</code> folder for all content after the readme contents. The code highlighting uses<br />
 <a href="https://highlightjs.org/">Highlightjs</a> for styles.</p>
+<p>Additonally, anything else placed in the <code>.assets</code> folder will be copied to the dist folder and published along with readme file.</p>
+<h3 id="setup">Setup</h3>
+<p>The structure</p>
+<pre><code class="hljs">- <span class="hljs-selector-class">.assets</span>
+-- head<span class="hljs-selector-class">.html</span>
+-- foot<span class="hljs-selector-class">.html</span>
+-- extends<span class="hljs-selector-class">.css</span>
+-- myimage<span class="hljs-selector-class">.jpg</span>
+- readme.md</code></pre>
+<p>The published <code>dist</code> folder content</p>
+<pre><code class="hljs">- index<span class="hljs-selector-class">.html</span>
+- styles<span class="hljs-selector-class">.css</span>
+- extends<span class="hljs-selector-class">.css</span>
+- myimage.jpg</code></pre>
   </div>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64038939-2"></script>
 <script>
