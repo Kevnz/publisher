@@ -2,6 +2,7 @@ const path = require('path')
 const fse = require('fs-extra')
 const processor = require('./process')
 const publish = require('./publish')
+const copy = require('./copy')
 
 const logStep = message =>
   new Promise(resolve => {
@@ -11,6 +12,7 @@ const logStep = message =>
 const generate = async () => {
   return processor()
     .then(() => logStep('HTML generated'))
+    .then(copy)
     .then(() => {
       return fse.copy(
         path.resolve(__dirname, 'assets', 'styles.css'),
