@@ -38,8 +38,7 @@ module.exports = async () => {
 
   converter.setFlavor('github')
   const html = `${format(header, {
-    name: packageInfo.name,
-    description: packageInfo.description,
+    ...packageInfo,
   })}
   ${converter.makeHtml(readme)}
   ${footer}`

@@ -22,6 +22,8 @@ const head = `<!DOCTYPE html>
   <title>{name}</title>
   <link rel="stylesheet" type="text/css" href="styles.css" />
   <meta name="description" content="{description}" />
+  <meta name="keywords" content="{keywords}" />
+  <meta name="homepage" content="{homepage}" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 
@@ -87,6 +89,8 @@ describe('The Publisher Module', () => {
         expect(distDir[0]).to.equal('index.html')
         expect(file.indexOf(pkg.name)).to.not.equal(-1)
         expect(file.indexOf(pkg.description)).to.not.equal(-1)
+        expect(file.indexOf(pkg.keywords)).to.not.equal(-1)
+        expect(file.indexOf(pkg.homepage)).to.not.equal(-1)
         expect(file.indexOf('THIS IS A TEST')).to.not.equal(-1)
         mock.restore()
         done()
