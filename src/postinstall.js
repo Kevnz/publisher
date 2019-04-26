@@ -8,18 +8,20 @@ module.exports = () => {
     .filter(f => f.indexOf('.html') === -1 || f.indexOf('.css') === -1)
     .map(f => ({
       from: path.resolve(__dirname, 'install/', f),
-      to: path.resolve(process.cwd(), '.assets1/', f),
+      to: path.resolve(process.cwd(), '.assets/', f),
     }))
 
-  const installDir = path.resolve(process.cwd(), '.assets1/')
+  const installDir = path.resolve(process.cwd(), '.assets/')
 
   if (!fs.existsSync(installDir)) {
     fs.mkdirSync(installDir)
+  } else {
+    return Promise.resolve(false)
   }
 
   assetsToCopy.forEach(element => {
     fs.copyFileSync(element.from, element.to)
   })
 
-  return Promise.resolve()
+  return Promise.resolve(true)
 }

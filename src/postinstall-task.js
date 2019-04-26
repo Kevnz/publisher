@@ -1,5 +1,5 @@
 const postinstall = require('./postinstall')
 
-postinstall().then(() => {
-  console.info('Assets copied')
+postinstall().then(result => {
+  console.info(result ? 'Assets copied' : 'Skipped Assets')
 })
