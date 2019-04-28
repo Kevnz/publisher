@@ -31,14 +31,14 @@
     "url": "https://github.com/Kevnz/publisher/issues"
   },
   "devDependencies": {
-    "@kev_nz/eslint-config": "^3.1.0",
+    "@kev_nz/eslint-config": "^3.3.0",
     "chai": "^4.2.0",
     "cross-env": "^5.2.0",
-    "eslint": "^5.14.1",
+    "eslint": "^5.16.0",
     "fuxor": "^2.2.5",
-    "mocha": "^6.0.2",
+    "mocha": "^6.1.4",
     "mocha-simple-snapshots": "^1.0.1",
-    "mock-fs": "^4.8.0"
+    "mock-fs": "^4.9.0"
   },
   "dependencies": {
     "fs-extra": "^7.0.1",
