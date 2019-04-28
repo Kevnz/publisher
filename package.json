@@ -1,6 +1,6 @@
 {
   "name": "@kev_nz/publisher",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Publish readme.md to gh-pages",
   "main": "src/index.js",
   "private": false,
